@@ -1,3 +1,18 @@
-[gd_scene format=3 uid="uid://ue5pyre0fwf5"]
+[gd_scene load_steps=4 format=3 uid="uid://ue5pyre0fwf5"]
 
-[node name="Table" type="Node2D"]
+[ext_resource type="Script" uid="uid://cnnowonfa0djj" path="res://Furniture/Seating/table.gd" id="1_4iu1m"]
+[ext_resource type="Texture2D" uid="uid://cafnslb1ahbde" path="res://Furniture/Seating/table4.png" id="2_es8ln"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h41sw"]
+size = Vector2(140, 158)
+
+[node name="Table" type="StaticBody2D"]
+script = ExtResource("1_4iu1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_h41sw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.441824, 0.403747)
+texture = ExtResource("2_es8ln")
