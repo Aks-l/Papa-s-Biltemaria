@@ -9,7 +9,7 @@ func _ready():
 	pass
 
 func interact(entity):
-	if entity.holding(): place_item(entity)
+	if entity.holding: place_item(entity)
 	else: _occupy(entity)
 
 func _occupy(entity):

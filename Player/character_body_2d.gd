@@ -3,7 +3,7 @@ extends CharacterBody2D
 class_name player
 const SPEED := 300.0
 const ROTATION_SPEED := 3.0
-var holding; 
+
 
 var holding: holdable = null
 
