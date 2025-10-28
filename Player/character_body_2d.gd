@@ -3,6 +3,7 @@ extends CharacterBody2D
 class_name player
 const SPEED := 300.0
 const ROTATION_SPEED := 3.0
+var holding; 
 
 func _physics_process(delta: float) -> void:
 	var rotation_input := Input.get_action_strength("right") - Input.get_action_strength("left")
@@ -26,5 +27,10 @@ func _unhandled_input(_event: InputEvent) -> void:
 	
 func interact_with_target():
 	if $InteractRayCast2D.is_colliding():
-		print("found something")
+		var collider = $InteractRayCast2D.get_collider()
+		if collider.has_method("interact"):
+			print("found something")
+			collider.interact(self)
 	
+			
+		
