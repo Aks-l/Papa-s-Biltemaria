@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://4n14hnjayfiu"]
+
+[ext_resource type="Script" uid="uid://cxfp1gmhj5j4c" path="res://Appliances/Oven/oven.gd" id="1_8icya"]
+[ext_resource type="Texture2D" uid="uid://bhr2dsh1xux52" path="res://Appliances/Oven/oven.png" id="1_m03ib"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8icya"]
+size = Vector2(158, 212)
+
+[node name="Oven" type="StaticBody2D"]
+script = ExtResource("1_8icya")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_8icya")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.500004, -0.999992)
+scale = Vector2(0.451149, 0.545918)
+texture = ExtResource("1_m03ib")
