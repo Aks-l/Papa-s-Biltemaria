@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3min2ktycsii"]
+
+[ext_resource type="Texture2D" uid="uid://4cjlv7v0ouhj" path="res://Player/dude2.png" id="1_2duk8"]
+[ext_resource type="Script" uid="uid://bmt6dh5i4uhph" path="res://Npcs/npcs.gd" id="1_ycscm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2duk8"]
+size = Vector2(67, 68)
+
+[node name="Npcs" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_ycscm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_2duk8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2duk8")
