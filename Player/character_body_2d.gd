@@ -4,6 +4,8 @@ class_name player
 const SPEED := 300.0
 const ROTATION_SPEED := 3.0
 
+var holding: holdable = null
+
 func _physics_process(delta: float) -> void:
 	var rotation_input := Input.get_action_strength("right") - Input.get_action_strength("left")
 	rotation += rotation_input * ROTATION_SPEED * delta

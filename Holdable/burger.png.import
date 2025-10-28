@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clda0msu5mios"
-path="res://.godot/imported/dudenpng.png-f9eebe8a7b4db0f95d63bf6c3acab889.ctex"
+uid="uid://bs33xmllokgtq"
+path="res://.godot/imported/burger.png-d62c28c939bc16ac1821f22052c31605.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/dudenpng.png"
-dest_files=["res://.godot/imported/dudenpng.png-f9eebe8a7b4db0f95d63bf6c3acab889.ctex"]
+source_file="res://Holdable/burger.png"
+dest_files=["res://.godot/imported/burger.png-d62c28c939bc16ac1821f22052c31605.ctex"]
 
 [params]
 

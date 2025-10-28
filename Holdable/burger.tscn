@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://byy8hi7uy3o12"]
+
+[ext_resource type="Script" uid="uid://cnd6kwxuqo7eh" path="res://Holdable/burger.gd" id="1_ojai2"]
+[ext_resource type="Texture2D" uid="uid://bs33xmllokgtq" path="res://Holdable/burger.png" id="2_mw8aj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8i0xx"]
+size = Vector2(117, 90)
+
+[node name="Burger" type="RigidBody2D"]
+gravity_scale = 0.0
+freeze = true
+script = ExtResource("1_ojai2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -1)
+shape = SubResource("RectangleShape2D_8i0xx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.247335, 0.246537)
+texture = ExtResource("2_mw8aj")

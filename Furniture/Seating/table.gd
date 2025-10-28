@@ -8,6 +8,10 @@ extends StaticBody2D
 func _ready():
 	pass
 
+func interact(entity):
+	if entity.holding(): place_item(entity)
+	else: _occupy(entity)
+
 func _occupy(entity):
 	if capacity == occupants:
 		push_error("Table full")
@@ -16,3 +20,7 @@ func _occupy(entity):
 
 func exit(entity):
 	occupants -= 1
+
+func place_item(entity):
+	
+	pass
