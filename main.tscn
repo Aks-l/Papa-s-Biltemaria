@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dukxaa5csg206"]
+[gd_scene load_steps=3 format=3 uid="uid://cwtvobft7jqau"]
 
 [ext_resource type="PackedScene" uid="uid://ue5pyre0fwf5" path="res://Furniture/Seating/table.tscn" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://dyce5v1rhq0r0" path="res://character_body_2d.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://dyce5v1rhq0r0" path="res://Player/character_body_2d.tscn" id="2_0xm2m"]
 
 [node name="Main" type="Node2D"]
 
