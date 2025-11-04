@@ -12,9 +12,9 @@ freeze = true
 script = ExtResource("1_ojai2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -1)
+position = Vector2(58, 44)
 shape = SubResource("RectangleShape2D_8i0xx")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Texture" type="TextureRect" parent="."]
 scale = Vector2(0.247335, 0.246537)
 texture = ExtResource("2_mw8aj")

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dyce5v1rhq0r0"]
+[gd_scene load_steps=5 format=3 uid="uid://dyce5v1rhq0r0"]
 
 [ext_resource type="Script" uid="uid://c0aqf0la6cyyw" path="res://Player/character_body_2d.gd" id="1_ij6vw"]
 [ext_resource type="Texture2D" uid="uid://4cjlv7v0ouhj" path="res://Player/dude2.png" id="2_vvw5e"]
+[ext_resource type="Texture2D" uid="uid://ntvbjc8vavbm" path="res://icon.svg" id="3_inwu4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ij6vw"]
 size = Vector2(66, 56)
@@ -21,3 +22,21 @@ texture = ExtResource("2_vvw5e")
 target_position = Vector2(68, 1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+custom_minimum_size = Vector2(64, 64)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -82.0
+offset_top = -90.0
+offset_right = -50.0
+offset_bottom = -58.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("3_inwu4")
+expand_mode = 1

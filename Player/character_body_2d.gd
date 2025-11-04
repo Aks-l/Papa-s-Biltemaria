@@ -3,12 +3,11 @@ extends CharacterBody2D
 class_name player
 const SPEED := 300.0
 const ROTATION_SPEED := 3.0
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b5ffc4b030a72be0f5ae9569d0f3bd8539074d1
-
+@onready var raycast = $InteractRayCast2D
+@onready var empty_item = $CanvasLayer/TextureRect
 var holding: holdable = null
+
 
 func _physics_process(delta: float) -> void:
 	var rotation_input := Input.get_action_strength("right") - Input.get_action_strength("left")
@@ -29,13 +28,48 @@ func _physics_process(delta: float) -> void:
 func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("interact"):
 		interact_with_target()
+	if Input.is_action_just_pressed("pickup"):
+		print(holding)
+		if holding == null:
+			pickup_target()
+		else:
+			print("drop")
+			drop_item()
 	
+		
 func interact_with_target():
 	if $InteractRayCast2D.is_colliding():
-		var collider = $InteractRayCast2D.get_collider()
+		var collider = raycast.get_collider()
 		if collider.has_method("interact"):
 			print("found something")
 			collider.interact(self)
+			
+func pickup_target():
+	if raycast.is_colliding():
+		var collider = raycast.get_collider()
+		if collider.has_method("take_item"):
+			print("taken something")
+			collider.take_item(self)
+			
+func receive_item(texture: Texture2D,item):
+	holding = item
+	$CanvasLayer/TextureRect.texture = texture
+
+	
+func reset_holdable():
+	holding = null
+	$CanvasLayer/TextureRect.texture = empty_item
+
+func drop_item():
+
+	if holding == null:
+		return 
+		
+	get_tree().current_scene.add_child(holding)
+	holding.global_position = raycast.to_global(raycast.target_position)
+	reset_holdable()
+	
+
 	
 			
 		
